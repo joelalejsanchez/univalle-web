@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unidades</title>
+  </head>
+  <body>
+    <h1>Demostración de Unidades CSS</h1>
+
+    <div class="section">
+      <h2>Unidades Absolutas</h2>
+
+      <div class="label">200 píxeles (px)</div>
+      <div class="info">Píxeles: unidad absoluta, 1px = 1/96 de pulgada</div>
+      <div class="block px-block">200px * 100px</div>
+
+      <div class="label">100 puntos (pt)</div>
+      <div class="info">Puntos: unidad tipográfica, 1pt = 1/72 de pulgada</div>
+      <div class="block pt-block">100pt * 60pt</div>
+
+      <div class="label">10 centímetros (cm)</div>
+      <div class="info">Centímetros: unidad métrica absoluta</div>
+      <div class="block cm-block">10cm * 3cm</div>
+    </div>
+
+    <div class="section">
+      <h2>Unidades Relativas - Porcentajes</h2>
+
+      <div class="label">Jerarquía: Padre → Hijo (80%) → Nieto (50%)</div>
+      <div class="info">
+        Los porcentajes se calculan en relación al elemento padre
+      </div>
+
+      <div class="block percentage-parent">
+        PADRE: 400px * 200px
+        <div class="block percentage-child">
+          HIJO: 80% del padre
+          <div class="block percentage-grandchild">NIETO: 50% del hijo</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Unidades Relativas - em y rem</h2>
+
+      <div class="em-container">
+        <div class="label">
+          10em * 5em (relativo al font-size del contenedor: 20px)
+        </div>
+        <div class="info">
+          em: relativo al font-size del elemento padre (20px * 10 = 200px de
+          ancho)
+        </div>
+        <div class="block em-block">10em * 5em</div>
+      </div>
+
+      <div class="label">
+        15rem * 6rem (relativo al font-size del root: 16px)
+      </div>
+      <div class="info">
+        rem: relativo al font-size del elemento raíz (16px * 15 = 240px de
+        ancho)
+      </div>
+      <div class="block rem-block">15rem * 6rem</div>
+    </div>
+
+    <div class="section">
+      <h2>Comparación de Tamaños</h2>
+      <div class="info">
+        <strong>Resumen de conversiones aproximadas:</strong><br />
+        • 200px = 200 píxeles<br />
+        • 100pt ≈ 133px (100 * 96/72)<br />
+        • 10cm ≈ 378px (10 * 37.8)<br />
+        • 80% del padre de 400px = 320px<br />
+        • 50% del hijo de 320px = 160px<br />
+        • 10em con base 20px = 200px<br />
+        • 15rem con base 16px = 240px
+      </div>
+    </div>
+  </body>
+</html>
